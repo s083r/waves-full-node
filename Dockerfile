@@ -9,4 +9,4 @@ RUN apk add --no-cache curl && \
 FROM openjdk:9-jre-slim
 COPY --from=0 /waves.jar /waves.jar
 EXPOSE 6869 6868
-CMD /usr/bin/java -jar /waves.jar /${NETWORK_TYPE}.conf
+CMD /usr/bin/java -jar /waves.jar /conf/${NETWORK_TYPE}.conf
